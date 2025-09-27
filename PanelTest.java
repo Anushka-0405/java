@@ -1,57 +1,39 @@
-package swing;
+package ass;
+
+
 
 import java.awt.*; 
-import java.awt.event.*; 
 import javax.swing.*; 
 
 public class PanelTest extends JFrame  
 { 
+    private JButton b, b1, b2; 
+    private JLabel l; 
 
-// JButton 
-  private JButton b, b1, b2,b3,b4; 
+    public PanelTest() 
+    { 
+        l = new JLabel("panel label"); 
+        b = new JButton("button1"); 
+        b1 = new JButton("button2"); 
+        b2 = new JButton("button3"); 
 
-  // Label to display text 
-  private JLabel l; 
-  
-  public PanelTest() 
-  { 
-       // Creating a label to display text 
-       l = new JLabel("panel label"); 
+        JPanel p = new JPanel(); 
+        p.add(b); 
+        p.add(b1);
+        p.add(b2); 
+        p.add(l); 
 
-     // Creating a new buttons 
-      b = new JButton("button1"); 
-      b1 = new JButton("button2"); 
-      b2 = new JButton("button3"); 
-      b3 = new JButton("button4"); 
-      b4 = new JButton("button5"); 
+        p.SetBackground(Color.red); 
+        add(p); 
 
-       
-       // Creating a panel to add buttons 
-       JPanel p = new JPanel(); 
+        setSize(300, 300); 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        setVisible(true);
+    } 
 
-       // Adding buttons and textfield to panel 
-       // using add() method 
-       p.add(b); 
-       p.add(b1); 
-       p.add(b2); 
-       p.add(b3);
-       p.add(b4);
-       p.add(l); 
+    public static void main(String[] args) 
+    { 
+        PanelTes p = new PanelTes (); 
+    } 
 
-       // setbackground of panel 
-       p.setBackground(Color.red); 
-
-       // Adding panel to frame 
-       add(p); 
-
-       // Setting the size of frame 
-       setSize(300, 300); 
-
-       show(); 
-  } 
-public static void main(String[] args) 
-  { 
-PanelTest p = new PanelTest(); 
-} 
-
-} 
+}
